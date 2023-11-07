@@ -60,10 +60,24 @@
             // 綁定 click 事件 
             $(".word1").click(function(){   
                 $(this).css('background-color','yellow');
+                $(this).css('color','black');
+            });  
+            $(".word1").dblclick(function(){   
+                $(this).css('background-color','blue');
+                $(this).css('color','white');
+            });  
+            $(".word1").mousemove(function(){   
+                $(this).html('滑鼠正在移動');
+            });  
+            $(".word1").mouseleave(function(){   
+                $(this).html('今天天氣真好');
             });  
             // 綁定 mousemove 事件 
             $(".word2").mousemove(function(){   
                 $(this).css("background-color", "pink"); 
+            });
+            $(".word2").mouseup(function(){   
+                $(this).css("background-color", "orange"); 
             });
             // 綁定 hover 事件
             $(".word3").hover(
