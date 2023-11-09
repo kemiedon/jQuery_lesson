@@ -1,5 +1,5 @@
 $(function(){
-    $(".openB").click(function(){
+    $(".openB").on('click',function(){
       $(".left").addClass("open");
       setTimeout(function(){
         $(".right").addClass("open");
@@ -10,7 +10,7 @@ $(function(){
       $(".closeB").delay(1000).fadeIn();
     });
   
-    $(".closeB").click(function(){
+    $(".closeB").on('click',function(){
       setTimeout(function(){
         $(".left").removeClass("open");
       }, 250);

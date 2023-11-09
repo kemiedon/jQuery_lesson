@@ -58,25 +58,25 @@
         $(function(){
             // 按一下word1換色
             // 綁定 click 事件 
-            $(".word1").click(function(){   
+            $(".word1").on('click',function(){   
                 $(this).css('background-color','yellow');
                 $(this).css('color','black');
             });  
-            $(".word1").dblclick(function(){   
+            $(".word1").on('dblclick',function(){   
                 $(this).css('background-color','blue');
                 $(this).css('color','white');
             });  
-            $(".word1").mousemove(function(){   
+            $(".word1").on('mousemove',function(){   
                 $(this).html('滑鼠正在移動');
             });  
-            $(".word1").mouseleave(function(){   
+            $(".word1").on('mouseleave',function(){   
                 $(this).html('今天天氣真好');
             });  
             // 綁定 mousemove 事件 
-            $(".word2").mousemove(function(){   
+            $(".word2").on('mousemove',function(){   
                 $(this).css("background-color", "pink"); 
             });
-            $(".word2").mouseup(function(){   
+            $(".word2").on('mouseup',function(){   
                 $(this).css("background-color", "orange"); 
             });
             // 綁定 hover 事件
@@ -90,7 +90,7 @@
                     $(this).css('background-color','lightskyblue');
                 }
             )
-            $("#fruit").change(function(){
+            $("#fruit").on('change',function(){
                 $('.list').text("您選擇的水果是"+ $(this).val());
             });
        

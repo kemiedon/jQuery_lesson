@@ -1,7 +1,7 @@
 $(function() {
 
     // 當頁面載入完成後執行以下程式碼
-    $('.accordion-header').click(function() {
+    $('.accordion-header').on('click',function() {
   
       // 當點擊折疊面板標題時，執行以下程式碼
   
@@ -17,6 +17,6 @@ $(function() {
     });
     
     // 預設第一個折疊面板內容顯示
-    $('.accordion-header').first().click();
+    $('.accordion-header').first().on('click',);
   });
   

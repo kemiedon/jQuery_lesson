@@ -52,7 +52,7 @@
 var boxes = $(".box");
 var currentBox = boxes.first();
 
-$("#prevBtn").click(function() {
+$("#prevBtn").on('click',function() {
   currentBox = currentBox.prev();
   if (currentBox.length == 0) {
     currentBox = boxes.last();
@@ -63,7 +63,7 @@ $("#prevBtn").click(function() {
   currentBox.css("border", "2px solid red");
 });
 
-$("#nextBtn").click(function() {
+$("#nextBtn").on('click',function() {
   currentBox = currentBox.next();
   if (currentBox.length == 0) {
     currentBox = boxes.first();

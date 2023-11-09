@@ -15,7 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('.item').click(function() {
+            $('.item').on('click',function() {
                 // 使用 parent() 函數獲取父級元素
                 var parentElement = $(this).parent();
                 parentElement.css('background-color', 'bisque');

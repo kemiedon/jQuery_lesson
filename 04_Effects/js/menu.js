@@ -1,6 +1,6 @@
 $(function() {
     // 當 ".toggle" 元素被點擊時
-    $('.toggle').click(function() {
+    $('.toggle').on('click',function() {
       // 切換 ".menu" 元素的 "expanded" class
       $('.menu').toggleClass('expanded');
       // 取得所有 "li" 元素

@@ -1,6 +1,6 @@
 $(function() {
     // 綁定 .lightbox 元素的點擊事件
-    $('.lightbox').click(function(e) {
+    $('.lightbox').on('click',function(e) {
       // 防止點擊時跳轉到 href 指定的 URL
       e.preventDefault();
       // 取得被點擊的圖片 URL
@@ -12,7 +12,7 @@ $(function() {
     });
   
     // 綁定 .lightbox-close 元素的點擊事件
-    $('.lightbox-close').click(function() {
+    $('.lightbox-close').on('click',function() {
       // 隱藏 .lightbox-overlay 元素，以關閉圖片顯示
       $('.lightbox-overlay').fadeOut();
     });

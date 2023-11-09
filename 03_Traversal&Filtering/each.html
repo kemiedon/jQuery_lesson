@@ -21,7 +21,7 @@ $(document).ready(function() {
   $("#output").hide();
 
   // 當使用者按下按鈕後執行以下程式碼
-  $("#showFruits").click(function() {
+  $("#showFruits").on('click',function() {
     // 使用 each 方法遍歷陣列並將值輸出到網頁上
     $.each(fruits, function(index, value) {
       $("#output").append("<p>水果 " + (index + 1) + ": " + value + "</p>");
