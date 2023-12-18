@@ -86,40 +86,38 @@
                 <button type="submit">送出</button>
             </div>
         </form>
-        <div class="output">
-            <div id="keyInfo"></div>
-        </div>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
 
             // 當焦點進入姓名、郵件、留言欄位時
-            $("#name, #email, #message").focus(function() {
+            $("#name, #email, #message").on('focus', function() {
                 $(this).css("background-color", "#ffffcc");
             });
 
             // 當焦點離開姓名、郵件、留言欄位時
-            $("#name, #email, #message").blur(function() {
+            $("#name, #email, #message").on('blur', function() {
                 $(this).css("background-color", "#fff");
             });
 
             // 當姓名、郵件、留言欄位的內容發生變化時
-            $("#name, #email, #message").change(function() {
+            $("#name, #email, #message").on('change', function() {
                 var textValue = $(this).val();
-                $("#output #keyInfo").text("輸入內容變化為：" + textValue);
+                console.log("輸入內容變化為：" + textValue);
             });
 
             // 當按下鍵盤按鈕時
-            $("#name, #email, #message").keydown(function(event) {
+            $("#name, #email, #message").on('keydown', function(event) {
                 var key = event.key;
-                $("#output #keyInfo").text("按下按鍵：" + key);
+                console.log("按下按鍵：" + key);
             });
 
             // 當鬆開鍵盤按鈕時
-            $("#name, #email, #message").keyup(function(event) {
+            $("#name, #email, #message").on('keyup', function(event) {
                 var key = event.key;
-                $("#output #keyInfo").append(" 鬆開按鍵：" + key + "<br>");
+                console.log(" 鬆開按鍵：" + key + "<br>");
             });
 
             // 當表單送出時

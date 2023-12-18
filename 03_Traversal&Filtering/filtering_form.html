@@ -42,12 +42,13 @@
 <script>
   $(document).ready(function() {
     // 使用 jQuery 選擇所有具有 'styled-input' 類別的元素，但排除 '興趣' 區塊內的複選框
-    $('.styled-input').not(':has(:checkbox)').each(function() {
+    $('.styled-input').not('#phone').each(function() {
       $(this).css({
-        'width': '100px',
+        'width': '150px',
         'height': '40px',
         'padding': '5px',
-        'border': '1px solid green',
+        'margin-bottom': '10px',
+        'border': '1px solid red',
         'border-radius': '5px'
       });
     });

@@ -5,13 +5,13 @@
   <style>
     body {
       background-color: bisque;
-      height: 2000px; /* 用于生成滚动条 */
+      height: 2000px; /* 用於產生捲軸 */
     }
     #bottomBlock {
       background-color: #333;
       color: #fff;
       padding: 20px;
-      display: none; /* 初始状态隐藏 */
+      display: none; /* 初始狀態隱藏 */
       position: fixed;
       bottom: 0;
       left: 0;
@@ -26,15 +26,15 @@
 
 <script>
 $(document).ready(function() {
-  // 当页面发生滚动时触发
+
   $(window).scroll(function() {
-    // 获取页面垂直滚动的距离
+    // 取得頁面高度
     var scrollPosition = $(window).scrollTop();
 
-    // 获取底部区块的位置
+    // 取得底部位置
     var bottomBlockPosition = $("#bottomBlock").position().top;
 
-    // 判断是否滚动到底部区块，如果是，则淡入
+    // 判斷是否到底部，如果是，則淡入
     if (scrollPosition + $(window).height() >= bottomBlockPosition) {
       $("#bottomBlock").fadeIn(1000); // 1000 毫秒淡入效果
     }
