@@ -21,9 +21,9 @@
                 success: function (data) {
                     console.log(data);
                     // 將資料加入下拉選單
-                    // $.each(data.fruits, function (index, value) {
-                    //     $("#fruit").append($("<option></option>").text(value.name));
-                    // });
+                    $.each(data.fruits, function (index, value) {
+                        $("#fruit").append($("<option></option>").text(value.name));
+                    });
                 },
                 error: function (xhr, status, error) {
                     console.log("Error: " + error);
